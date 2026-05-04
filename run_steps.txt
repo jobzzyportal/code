@@ -1,0 +1,57 @@
+flex english.l
+gcc lex.yy.c -o output
+./output
+
+Same steps for c_lexer.l and c_symbol_table.l.
+
+
+or
+
+STEP-BY-STEP EXECUTION
+🔹 STEP 1: Go to your folder
+
+Type this exactly 👇
+
+cd /mnt/d/VC\ CODE/VS\ CODE\ PROJECTS/ass3
+🔹 STEP 2: Check files
+ls
+
+👉 You should see:
+
+english.l
+c_lexer.l
+c_symbol_table.l
+🔹 STEP 3: Install flex & gcc (only once)
+sudo apt update
+sudo apt install flex gcc
+
+👉 If already installed → it will say already newest version
+
+🔹 STEP 4: Run C LEXICAL ANALYZER
+👉 For c_lexer.l
+flex c_lexer.l
+gcc lex.yy.c -o lexer
+./lexer
+🔹 STEP 5: Give input
+
+Type:
+
+int a = 10;
+
+Press Enter + Ctrl + D (to stop input)
+
+🔹 STEP 6: Run Symbol Table version
+flex c_symbol_table.l
+gcc lex.yy.c -o sym
+./sym
+🔹 STEP 7: Run English analyzer
+flex english.l
+gcc lex.yy.c -o eng
+./eng
+⚠️ IMPORTANT (VERY COMMON MISTAKE)
+
+After input, press:
+
+CTRL + D
+
+👉 Otherwise program will keep waiting
