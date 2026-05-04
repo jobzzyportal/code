@@ -1,0 +1,60 @@
+🚀 STEP-BY-STEP (YOUR CODE)
+
+You are already in:
+
+/mnt/d/VC CODE/VS CODE PROJECTS
+🔹 STEP 1: Make sure file exists
+
+Run:
+
+ls
+
+👉 You should see:
+
+ass5p.py
+🔹 STEP 2: Run the program
+
+👉 Use this exact command:
+
+python3 ass5p.py
+🔹 STEP 3: Give input
+
+Example:
+
+Enter number of TAC lines: 4
+Enter TAC:
+t1 = a + 0
+t2 = b * 1
+t3 = c * 0
+t4 = 2 + 3
+🔹 STEP 4: Output you should get
+--- OPTIMIZED CODE ---
+t1 = a
+t2 = b
+t3 = 0
+t4 = 5
+⚠️ VERY IMPORTANT (EXAM)
+
+👉 Input format MUST be exactly like:
+
+t1 = a + 0   ✅
+
+❌ Not:
+
+t1=a+0       ❌
+❌ YOUR PREVIOUS ERROR
+
+You wrote:
+
+python 3 ass5p.py   ❌
+
+👉 Correct is:
+
+python3 ass5p.py   ✅
+🧠 QUICK MEMORY TRICK
+python3 filename.py
+🚀 IF STILL NOT WORKING
+
+Run:
+
+python3 --version

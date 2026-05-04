@@ -1,0 +1,125 @@
+🎯 STEP-BY-STEP EXECUTION (VERY EASY)
+
+You are already here:
+
+tanishk4646@TanishkVictus:/mnt/d/VC CODE/VS CODE PROJECTS/ass4$
+🔹 STEP 1: Create the C file
+
+Open terminal and type:
+
+nano tac.c
+
+
+STEP 3: Save and exit
+
+Press:
+
+CTRL + O → Enter → CTRL + X
+🔹 STEP 4: Compile the program
+gcc tac.c -o tac
+
+👉 If no error → good ✔
+
+🔹 STEP 5: Run the program
+./tac
+🔹 STEP 6: Give input
+
+Example:
+
+a+b*c-d
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------
+for python
+
+
+🚀 STEP-BY-STEP (PYTHON VERSION)
+🔹 STEP 1: Go to your folder (WSL)
+cd "/mnt/d/VC CODE/VS CODE PROJECTS/ass4"
+🔹 STEP 2: Create Python file
+nano tac.py
+🔹 STEP 3: Paste code
+
+Paste this clean version (formatted properly 👇):
+
+temp_count = 1
+
+def new_temp():
+    global temp_count
+    t = f"t{temp_count}"
+    temp_count += 1
+    return t
+
+def generate_tac(expr):
+    expr = list(expr)
+
+    # Handle * and /
+    i = 0
+    while i < len(expr):
+        if expr[i] in ['*', '/']:
+            op = expr[i]
+            t = new_temp()
+            print(f"{t} = {expr[i-1]} {op} {expr[i+1]}")
+            expr[i-1:i+2] = [t]
+            i = 0
+        else:
+            i += 1
+
+    # Handle + and -
+    i = 0
+    while i < len(expr):
+        if expr[i] in ['+', '-']:
+            op = expr[i]
+            t = new_temp()
+            print(f"{t} = {expr[i-1]} {op} {expr[i+1]}")
+            expr[i-1:i+2] = [t]
+            i = 0
+        else:
+            i += 1
+
+expr = input("Enter expression: ")
+generate_tac(expr)
+🔹 STEP 4: Save and exit
+
+Press:
+
+CTRL + O → Enter → CTRL + X
+🔹 STEP 5: Run program
+python3 tac.py
+🔹 STEP 6: Give input
+
+Example:
+
+a+b*c-d
+✅ OUTPUT
+t1 = b * c
+t2 = a + t1
+t3 = t2 - d
+⚠️ IMPORTANT
+
+✔ No spaces:
+
+a+b*c-d   ✅
+a + b*c   ❌
+
+✔ Only simple variables:
+
+a,b,c     ✅
+❗ IF PYTHON NOT WORKING
+
+Run:
+
+python3 --version
+
+If not installed:
+
+sudo apt install python3
